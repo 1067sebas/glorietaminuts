@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Minutas Glorieta · Empanadas, milanesas, pizza y lomitos</title>
+<meta name="description" content="Minutas Glorieta en Emboscada: empanadas, bocaditos, sándwiches de milanesa y lomito, y pizza. Pedí por WhatsApp o visitanos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #fffdf6; --ink: #1d2b24; --muted: #56655d; --yellow: #ffc93c; --red: #d7263d; --line: #e6dfc8; --on-yellow: #1d2b24;
+  --display: "Bricolage Grotesque", "Arial Black", system-ui, sans-serif;
+  --body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #14201b; --ink: #f6f1de; --muted: #b7c3bb; --line: #2c3d35; --price: #ff7b8c; }
+}
+:root[data-theme="dark"] { --bg: #14201b; --ink: #f6f1de; --muted: #b7c3bb; --line: #2c3d35; --price: #ff7b8c; }
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 1.0625rem; line-height: 1.55; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+.wrap { max-width: 62rem; margin: 0 auto; padding: 0 1.25rem; }
+
+/* Sección Hero */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
+              url('—Pngtree—freshly baked pizza with mozzarella_15934253.jpg') center/cover no-repeat;
+  color: #ffffff;
+  padding: 6rem 0;
+  position: relative;
+  text-align: center;
+}
+.hero h1 { font-family: var(--display); font-weight: 800; font-size: clamp(3.4rem, 15vw, 9rem); line-height: .86; letter-spacing: -.04em; margin: 0 0 1.5rem; color: var(--yellow); text-shadow: 2px 4px 8px rgba(0,0,0,0.6); }
+.hero h1 span { display: block; font-size: .36em; letter-spacing: -.02em; font-weight: 500; margin-bottom: .35em; color: var(--yellow); }
+.hero p { max-width: 35rem; font-size: 1.2rem; margin: 0 auto 2rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); }
+
+/* Botones */
+.btns { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; }
+.btn { display: inline-block; padding: .9rem 1.4rem; border-radius: 999px; font-weight: 700; text-decoration: none; border: 2px solid var(--on-yellow); }
+.btn.main { background: var(--red); border-color: var(--red); color: #fff; }
+.hero .btn.alt { background: rgba(255, 255, 255, 0.1); color: #ffffff; border-color: #ffffff; }
+.btn.alt { background: transparent; color: var(--on-yellow); }
+@media (prefers-reduced-motion: no-preference) { .btn { transition: transform .15s; } }
+.btn:hover { transform: translateY(-1px); }
+
+/* Menú */
+section { padding: 3.5rem 0; }
+h2 { font-family: var(--display); font-weight: 800; font-size: clamp(2rem, 6vw, 3rem); letter-spacing: -.03em; line-height: 1; margin: 0 0 .5rem; }
+.sub { color: var(--muted); margin: 0 0 2rem; }
+.menu { display: grid; gap: 0; grid-template-columns: 1fr; }
+.item { display: grid; grid-template-columns: 1fr auto; gap: .2rem 1rem; align-items: baseline; padding: 1.1rem 0; border-top: 2px solid var(--line); }
+.item:last-child { border-bottom: 2px solid var(--line); }
+.item h3 { font-family: var(--display); font-size: 1.5rem; margin: 0; min-width: 0; letter-spacing: -.02em; }
+.item p { margin: 0; color: var(--muted); grid-column: 1 / -1; }
+.price { font-family: var(--display); font-weight: 800; font-size: 1.2rem; color: var(--price, var(--red)); text-align: right; line-height: 1.25; }
+@media (max-width: 40rem) { .item { flex-direction: column; gap: .15rem; } }
+@media (min-width: 56rem) { .menu { grid-template-columns: 1fr 1fr; column-gap: 3rem; } .item:nth-last-child(2) { border-bottom: 2px solid var(--line); } }
+
+/* Sección Visitanos */
+.visit { background: var(--ink); color: var(--bg); }
+.visit h2 { color: var(--yellow); }
+.visit .sub { color: inherit; opacity: .8; }
+dl { margin: 0 0 2rem; display: grid; grid-template-columns: auto 1fr; gap: .6rem 1.5rem; }
+dt { font-weight: 700; color: var(--yellow); }
+dd { margin: 0; }
+.visit .btn.alt { color: var(--bg); border-color: var(--bg); }
+footer { padding: 1.5rem 0; color: var(--muted); font-size: .95rem; }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <h1><span>Minutas</span>Glorieta</h1>
+    <p>Empanadas, bocaditos, sándwiches de milanesa y lomito, y pizza. Todo caliente, todos los días.</p>
+    <div class="btns">
+      <a class="btn main" id="wa" href="#">Pedir por WhatsApp</a>
+      <a class="btn alt" id="map" href="#">Cómo llegar</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="menu">
+    <div class="wrap">
+      <h2>Lo que servimos</h2>
+      <p class="sub">Precios en guaraníes. También tomamos pedidos por WhatsApp.</p>
+      <div class="menu">
+        <div class="item"><h3>Empanadas</h3><b class="price">3.000 Gs.<br>Al horno 4.500 Gs.</b><p>Rellenas y recién hechas, para llevar por unidad o por docena.</p></div>
+        <div class="item"><h3>Bocaditos</h3><b class="price">5.000 Gs.</b><p>Ideales para compartir, para reuniones y cumpleaños.</p></div>
+        <div class="item"><h3>Sándwich de milanesa</h3><b class="price">5.000 Gs.</b><p>Milanesa crocante en pan fresco, con lo que le quieras agregar.</p></div>
+        <div class="item"><h3>Sándwich de lomito</h3><b class="price">15.000 Gs.</b><p>Lomito jugoso, armado al momento.</p></div>
+        <div class="item"><h3>Pizza</h3><b class="price">30.000 Gs.<br>Borde relleno 40.000 Gs.</b><p>Entera o por porción, lista para comer o para llevar.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visitanos">
+    <div class="wrap">
+      <h2>Visitanos</h2>
+      <p class="sub">Estamos en Emboscada.</p>
+      <dl>
+        <dt>Dirección</dt><dd id="addr"></dd>
+        <dt>Horario</dt><dd id="hours"></dd>
+        <dt>WhatsApp</dt><dd id="phone"></dd>
+        <dt>Correo</dt><dd><a id="mail" href="#"></a></dd>
+      </dl>
+      <div class="btns">
+        <a class="btn main" id="wa2" href="#">Escribinos</a>
+        <a class="btn alt" id="map2" href="#">Abrir en Google Maps</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© Minutas Glorieta</div></footer>
+
+<script>
+// Configuración centralizada
+const CONFIG = {
+  whatsapp: "595982689731",
+  phoneText: "+595 982 689 731",
+  address: "Av. Guillermo Naumann, Emboscada",
+  hours: "Lunes a sábado, 18:00 a 23:30",
+  email: "gloriagonzaleznu76@gmail.com",
+  mapsUrl: "" 
+};
+
+// Generación de enlaces
+const msg = encodeURIComponent("Hola, quiero hacer un pedido en Minutas Glorieta.");
+const waUrl = `https://wa.me/${CONFIG.whatsapp}?text=${msg}`;
+const mapUrl = CONFIG.mapsUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Minutas Glorieta " + CONFIG.address)}`;
+
+// Asignación de URLs a los botones
+["wa", "wa2"].forEach(id => document.getElementById(id).href = waUrl);
+["map", "map2"].forEach(id => document.getElementById(id).href = mapUrl);
+
+// Inserción de textos en la web
+document.getElementById("addr").textContent = CONFIG.address;
+document.getElementById("hours").textContent = CONFIG.hours;
+document.getElementById("phone").textContent = CONFIG.phoneText;
+
+const mailElement = document.getElementById("mail");
+mailElement.textContent = CONFIG.email;
+mailElement.href = `mailto:${CONFIG.email}`;
+</script>
+</body>
+</html>
